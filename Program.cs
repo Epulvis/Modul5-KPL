@@ -1,9 +1,10 @@
-﻿using static System.Runtime.InteropServices.JavaScript.JSType;
-
-internal class Program
+﻿internal class Program
 {
     private static void Main(string[] args)
     {
+        PemrosesData number = new PemrosesData();
+        number.DapatkanNilaiTerbesar(10, 30, 22);
+
         SimpleDataBase<int> data = new SimpleDataBase<int>();
         data.AddNewData(12);
         data.AddNewData(34);
@@ -36,8 +37,6 @@ class SimpleDataBase<T>
         for (int i = 0; i < storedData.Count; i++) {
             Console.WriteLine($"Data {i+1} berisi: {storedData[i]}, yang pada disimpan waktu UTC: {inputDates[i]}");
         }
-        PemrosesData data = new PemrosesData();
-        data.DapatkanNilaiTerbesar(10, 30, 22);
     }
 }
 
